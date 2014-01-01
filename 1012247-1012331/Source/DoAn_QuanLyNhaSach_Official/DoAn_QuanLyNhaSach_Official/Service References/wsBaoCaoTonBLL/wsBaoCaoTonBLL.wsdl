@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getListBaoCaoTon">
+        <s:complexType />
+      </s:element>
+      <s:element name="getListBaoCaoTonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getListBaoCaoTonResult" type="tns:ArrayOfBaoCaoTonDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfBaoCaoTonDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BaoCaoTonDTO" nillable="true" type="tns:BaoCaoTonDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BaoCaoTonDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="1" maxOccurs="1" name="TonCuoi" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PhatSinh" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TonDau" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaSach" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Thang" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaBaoCaoTon" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ExtensionDataObject" />
+      <s:element name="insertBaoCaoTon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="baocaoDTO" type="tns:BaoCaoTonDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertBaoCaoTonResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="deleteBaoCaoTon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="baocaoDTO" type="tns:BaoCaoTonDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteBaoCaoTonResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="updateBaoCaoTon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="baocaoDTO" type="tns:BaoCaoTonDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateBaoCaoTonResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getListBaoCaoTonSoapIn">
+    <wsdl:part name="parameters" element="tns:getListBaoCaoTon" />
+  </wsdl:message>
+  <wsdl:message name="getListBaoCaoTonSoapOut">
+    <wsdl:part name="parameters" element="tns:getListBaoCaoTonResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertBaoCaoTonSoapIn">
+    <wsdl:part name="parameters" element="tns:insertBaoCaoTon" />
+  </wsdl:message>
+  <wsdl:message name="insertBaoCaoTonSoapOut">
+    <wsdl:part name="parameters" element="tns:insertBaoCaoTonResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteBaoCaoTonSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteBaoCaoTon" />
+  </wsdl:message>
+  <wsdl:message name="deleteBaoCaoTonSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteBaoCaoTonResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateBaoCaoTonSoapIn">
+    <wsdl:part name="parameters" element="tns:updateBaoCaoTon" />
+  </wsdl:message>
+  <wsdl:message name="updateBaoCaoTonSoapOut">
+    <wsdl:part name="parameters" element="tns:updateBaoCaoTonResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsBaoCaoTonBLLSoap">
+    <wsdl:operation name="getListBaoCaoTon">
+      <wsdl:input message="tns:getListBaoCaoTonSoapIn" />
+      <wsdl:output message="tns:getListBaoCaoTonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertBaoCaoTon">
+      <wsdl:input message="tns:insertBaoCaoTonSoapIn" />
+      <wsdl:output message="tns:insertBaoCaoTonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteBaoCaoTon">
+      <wsdl:input message="tns:deleteBaoCaoTonSoapIn" />
+      <wsdl:output message="tns:deleteBaoCaoTonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateBaoCaoTon">
+      <wsdl:input message="tns:updateBaoCaoTonSoapIn" />
+      <wsdl:output message="tns:updateBaoCaoTonSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsBaoCaoTonBLLSoap" type="tns:wsBaoCaoTonBLLSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getListBaoCaoTon">
+      <soap:operation soapAction="http://tempuri.org/getListBaoCaoTon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertBaoCaoTon">
+      <soap:operation soapAction="http://tempuri.org/insertBaoCaoTon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteBaoCaoTon">
+      <soap:operation soapAction="http://tempuri.org/deleteBaoCaoTon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateBaoCaoTon">
+      <soap:operation soapAction="http://tempuri.org/updateBaoCaoTon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsBaoCaoTonBLLSoap12" type="tns:wsBaoCaoTonBLLSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getListBaoCaoTon">
+      <soap12:operation soapAction="http://tempuri.org/getListBaoCaoTon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertBaoCaoTon">
+      <soap12:operation soapAction="http://tempuri.org/insertBaoCaoTon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteBaoCaoTon">
+      <soap12:operation soapAction="http://tempuri.org/deleteBaoCaoTon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateBaoCaoTon">
+      <soap12:operation soapAction="http://tempuri.org/updateBaoCaoTon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsBaoCaoTonBLL">
+    <wsdl:port name="wsBaoCaoTonBLLSoap" binding="tns:wsBaoCaoTonBLLSoap">
+      <soap:address location="http://localhost:1606/ServicesBLL/wsBaoCaoTonBLL.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsBaoCaoTonBLLSoap12" binding="tns:wsBaoCaoTonBLLSoap12">
+      <soap12:address location="http://localhost:1606/ServicesBLL/wsBaoCaoTonBLL.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getListKhachHang">
+        <s:complexType />
+      </s:element>
+      <s:element name="getListKhachHangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getListKhachHangResult" type="tns:ArrayOfKhachHangDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfKhachHangDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="KhachHangDTO" nillable="true" type="tns:KhachHangDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="KhachHangDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SoTienNo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DienThoai" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiaChi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HoTen" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaKhachHang" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="insertKhachHang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="khachhangDTO" type="tns:KhachHangDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertKhachHangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertKhachHangResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addNewKhachHang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="khachhangDTO" type="tns:KhachHangDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addNewKhachHangResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="deleteKhachHang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="kh" type="tns:KhachHangDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteKhachHangResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="updateKhachHang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="kh" type="tns:KhachHangDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateKhachHangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateKhachHangResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMaKhachHang">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="hoten" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMaKhachHangResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getMaKhachHangResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getKhachHangInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="makhachhang" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getKhachHangInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getKhachHangInfoResult" type="tns:KhachHangDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getListKhachHangSoapIn">
+    <wsdl:part name="parameters" element="tns:getListKhachHang" />
+  </wsdl:message>
+  <wsdl:message name="getListKhachHangSoapOut">
+    <wsdl:part name="parameters" element="tns:getListKhachHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertKhachHangSoapIn">
+    <wsdl:part name="parameters" element="tns:insertKhachHang" />
+  </wsdl:message>
+  <wsdl:message name="insertKhachHangSoapOut">
+    <wsdl:part name="parameters" element="tns:insertKhachHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="addNewKhachHangSoapIn">
+    <wsdl:part name="parameters" element="tns:addNewKhachHang" />
+  </wsdl:message>
+  <wsdl:message name="addNewKhachHangSoapOut">
+    <wsdl:part name="parameters" element="tns:addNewKhachHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteKhachHangSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteKhachHang" />
+  </wsdl:message>
+  <wsdl:message name="deleteKhachHangSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteKhachHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateKhachHangSoapIn">
+    <wsdl:part name="parameters" element="tns:updateKhachHang" />
+  </wsdl:message>
+  <wsdl:message name="updateKhachHangSoapOut">
+    <wsdl:part name="parameters" element="tns:updateKhachHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMaKhachHangSoapIn">
+    <wsdl:part name="parameters" element="tns:getMaKhachHang" />
+  </wsdl:message>
+  <wsdl:message name="getMaKhachHangSoapOut">
+    <wsdl:part name="parameters" element="tns:getMaKhachHangResponse" />
+  </wsdl:message>
+  <wsdl:message name="getKhachHangInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:getKhachHangInfo" />
+  </wsdl:message>
+  <wsdl:message name="getKhachHangInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:getKhachHangInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsKhachHangSoap">
+    <wsdl:operation name="getListKhachHang">
+      <wsdl:input message="tns:getListKhachHangSoapIn" />
+      <wsdl:output message="tns:getListKhachHangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertKhachHang">
+      <wsdl:input message="tns:insertKhachHangSoapIn" />
+      <wsdl:output message="tns:insertKhachHangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="addNewKhachHang">
+      <wsdl:input message="tns:addNewKhachHangSoapIn" />
+      <wsdl:output message="tns:addNewKhachHangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteKhachHang">
+      <wsdl:input message="tns:deleteKhachHangSoapIn" />
+      <wsdl:output message="tns:deleteKhachHangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateKhachHang">
+      <wsdl:input message="tns:updateKhachHangSoapIn" />
+      <wsdl:output message="tns:updateKhachHangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getMaKhachHang">
+      <wsdl:input message="tns:getMaKhachHangSoapIn" />
+      <wsdl:output message="tns:getMaKhachHangSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getKhachHangInfo">
+      <wsdl:input message="tns:getKhachHangInfoSoapIn" />
+      <wsdl:output message="tns:getKhachHangInfoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsKhachHangSoap" type="tns:wsKhachHangSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getListKhachHang">
+      <soap:operation soapAction="http://tempuri.org/getListKhachHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertKhachHang">
+      <soap:operation soapAction="http://tempuri.org/insertKhachHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addNewKhachHang">
+      <soap:operation soapAction="http://tempuri.org/addNewKhachHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteKhachHang">
+      <soap:operation soapAction="http://tempuri.org/deleteKhachHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateKhachHang">
+      <soap:operation soapAction="http://tempuri.org/updateKhachHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMaKhachHang">
+      <soap:operation soapAction="http://tempuri.org/getMaKhachHang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getKhachHangInfo">
+      <soap:operation soapAction="http://tempuri.org/getKhachHangInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsKhachHangSoap12" type="tns:wsKhachHangSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getListKhachHang">
+      <soap12:operation soapAction="http://tempuri.org/getListKhachHang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertKhachHang">
+      <soap12:operation soapAction="http://tempuri.org/insertKhachHang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addNewKhachHang">
+      <soap12:operation soapAction="http://tempuri.org/addNewKhachHang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteKhachHang">
+      <soap12:operation soapAction="http://tempuri.org/deleteKhachHang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateKhachHang">
+      <soap12:operation soapAction="http://tempuri.org/updateKhachHang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMaKhachHang">
+      <soap12:operation soapAction="http://tempuri.org/getMaKhachHang" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getKhachHangInfo">
+      <soap12:operation soapAction="http://tempuri.org/getKhachHangInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsKhachHang">
+    <wsdl:port name="wsKhachHangSoap" binding="tns:wsKhachHangSoap">
+      <soap:address location="http://localhost:1604/Services/wsKhachHang.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsKhachHangSoap12" binding="tns:wsKhachHangSoap12">
+      <soap12:address location="http://localhost:1604/Services/wsKhachHang.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

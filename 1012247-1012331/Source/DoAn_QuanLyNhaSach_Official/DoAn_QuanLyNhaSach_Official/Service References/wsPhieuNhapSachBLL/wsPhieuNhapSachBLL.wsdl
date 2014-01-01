@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="insertPhieuNhapSach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="phieuDTO" type="tns:PhieuNhapSachDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PhieuNhapSachDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="1" maxOccurs="1" name="TongSoLuongNhap" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NgayNhap" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaChiTietPhieuNhapSach" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaPhieuNhapSach" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ExtensionDataObject" />
+      <s:element name="insertPhieuNhapSachResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="deletePhieuNhapSach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="phieuDTO" type="tns:PhieuNhapSachDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deletePhieuNhapSachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deletePhieuNhapSachResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updatePhieuNhapSach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="phieuDTO" type="tns:PhieuNhapSachDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updatePhieuNhapSachResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="insertPhieuNhapSachSoapIn">
+    <wsdl:part name="parameters" element="tns:insertPhieuNhapSach" />
+  </wsdl:message>
+  <wsdl:message name="insertPhieuNhapSachSoapOut">
+    <wsdl:part name="parameters" element="tns:insertPhieuNhapSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="deletePhieuNhapSachSoapIn">
+    <wsdl:part name="parameters" element="tns:deletePhieuNhapSach" />
+  </wsdl:message>
+  <wsdl:message name="deletePhieuNhapSachSoapOut">
+    <wsdl:part name="parameters" element="tns:deletePhieuNhapSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="updatePhieuNhapSachSoapIn">
+    <wsdl:part name="parameters" element="tns:updatePhieuNhapSach" />
+  </wsdl:message>
+  <wsdl:message name="updatePhieuNhapSachSoapOut">
+    <wsdl:part name="parameters" element="tns:updatePhieuNhapSachResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsPhieuNhapSachBLLSoap">
+    <wsdl:operation name="insertPhieuNhapSach">
+      <wsdl:input message="tns:insertPhieuNhapSachSoapIn" />
+      <wsdl:output message="tns:insertPhieuNhapSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deletePhieuNhapSach">
+      <wsdl:input message="tns:deletePhieuNhapSachSoapIn" />
+      <wsdl:output message="tns:deletePhieuNhapSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updatePhieuNhapSach">
+      <wsdl:input message="tns:updatePhieuNhapSachSoapIn" />
+      <wsdl:output message="tns:updatePhieuNhapSachSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsPhieuNhapSachBLLSoap" type="tns:wsPhieuNhapSachBLLSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insertPhieuNhapSach">
+      <soap:operation soapAction="http://tempuri.org/insertPhieuNhapSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletePhieuNhapSach">
+      <soap:operation soapAction="http://tempuri.org/deletePhieuNhapSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePhieuNhapSach">
+      <soap:operation soapAction="http://tempuri.org/updatePhieuNhapSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsPhieuNhapSachBLLSoap12" type="tns:wsPhieuNhapSachBLLSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insertPhieuNhapSach">
+      <soap12:operation soapAction="http://tempuri.org/insertPhieuNhapSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletePhieuNhapSach">
+      <soap12:operation soapAction="http://tempuri.org/deletePhieuNhapSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePhieuNhapSach">
+      <soap12:operation soapAction="http://tempuri.org/updatePhieuNhapSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsPhieuNhapSachBLL">
+    <wsdl:port name="wsPhieuNhapSachBLLSoap" binding="tns:wsPhieuNhapSachBLLSoap">
+      <soap:address location="http://localhost:1606/ServicesBLL/wsPhieuNhapSachBLL.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsPhieuNhapSachBLLSoap12" binding="tns:wsPhieuNhapSachBLLSoap12">
+      <soap12:address location="http://localhost:1606/ServicesBLL/wsPhieuNhapSachBLL.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

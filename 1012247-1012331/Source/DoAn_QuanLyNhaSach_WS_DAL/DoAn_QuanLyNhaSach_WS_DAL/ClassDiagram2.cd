@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DoAn_QuanLyNhaSach_WS_DAL.DAL.BaoCaoNoCongDAL" Collapsed="true">
+    <Position X="7.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAABAAAAAAAIAAAAAAAIAAAAACAAAACAQAAAAAAA=</HashCode>
+      <FileName>DAL\BaoCaoNoCongDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAn_QuanLyNhaSach_WS_DAL.DAL.BaoCaoTonDAL" Collapsed="true">
+    <Position X="9.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAABAAAAAAAABAAQAAAEQAAAAQAA=</HashCode>
+      <FileName>DAL\BaoCaoTonDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAn_QuanLyNhaSach_WS_DAL.DAL.ChiTietHoaDonDAL" Collapsed="true">
+    <Position X="7.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAACAABAAAAAAIAAAAAAAAgAAAABAAAgAAAQAAAAAAA=</HashCode>
+      <FileName>DAL\ChiTietHoaDonDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAn_QuanLyNhaSach_WS_DAL.DAL.ChiTietPhieuNhapSachDAL" Collapsed="true">
+    <Position X="9.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAEAQAAAAAAAQABEAAAAAAAAQAAJAAAA=</HashCode>
+      <FileName>DAL\ChiTietPhieuNhapSachDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAn_QuanLyNhaSach_WS_DAL.DAL.HoaDonBanSachDAL" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABgAAgAAAACAAAIAAAAAAAAAAAAgAAQAAACAAA=</HashCode>
+      <FileName>DAL\HoaDonBanSachDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAn_QuanLyNhaSach_WS_DAL.DAL.KhachHangDAL" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIADQAAAACAAAAAAAAAAACAAAEACAACAQAAAAAAA=</HashCode>
+      <FileName>DAL\KhachHangDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAn_QuanLyNhaSach_WS_DAL.DAL.PhieuNhapSachDAL">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAhAAACAAAAAAAAAAAAAACAAAAAAAAAQAACAAAA=</HashCode>
+      <FileName>DAL\PhieuNhapSachDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAn_QuanLyNhaSach_WS_DAL.DAL.PhieuThuTienDAL">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAIAAAAAAAAAAAAAAIAAAAQAACAQAAAAAAA=</HashCode>
+      <FileName>DAL\PhieuThuTienDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAn_QuanLyNhaSach_WS_DAL.DAL.SachDAL">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIASBAAAEAAAAAAIAAAAAAACAABAAAQICQAgAEAAA=</HashCode>
+      <FileName>DAL\SachDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAn_QuanLyNhaSach_WS_DAL.DAL.ThamSoDAL">
+    <Position X="2.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAECAkAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>DAL\ThamSoDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAn_QuanLyNhaSach_WS_DAL.DAL.TheLoaiSachDAL">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEDAAAAAAAAAAAAAgAAAAAAAAAEAAAAQAAAAAAA=</HashCode>
+      <FileName>DAL\TheLoaiSachDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

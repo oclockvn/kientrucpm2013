@@ -1,0 +1,10 @@
+E:\C#\Projects\DoAn_QuanLyNhaSach_WS_DAL\DoAn_QuanLyNhaSach_WS_DAL\bin\DoAn_QuanLyNhaSach_WS_DAL.dll
+E:\C#\Projects\DoAn_QuanLyNhaSach_WS_DAL\DoAn_QuanLyNhaSach_WS_DAL\bin\DoAn_QuanLyNhaSach_WS_DAL.pdb
+E:\C#\Projects\DoAn_QuanLyNhaSach_WS_DAL\DoAn_QuanLyNhaSach_WS_DAL\obj\Debug\DoAn_QuanLyNhaSach_WS_DAL.dll
+E:\C#\Projects\DoAn_QuanLyNhaSach_WS_DAL\DoAn_QuanLyNhaSach_WS_DAL\obj\Debug\DoAn_QuanLyNhaSach_WS_DAL.pdb
+E:\C#\Projects\DoAn_QuanLyNhaSach_WS_DAL\DoAn_QuanLyNhaSach_WS_DAL\obj\Debug\DoAn_QuanLyNhaSach_WS_DAL.csprojResolveAssemblyReference.cache
+D:\SkyDrive\Semester 5\Software Analysis and Design\Homeworks\Do an\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_WS_DAL\DoAn_QuanLyNhaSach_WS_DAL\bin\DoAn_QuanLyNhaSach_WS_DAL.dll
+D:\SkyDrive\Semester 5\Software Analysis and Design\Homeworks\Do an\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_WS_DAL\DoAn_QuanLyNhaSach_WS_DAL\bin\DoAn_QuanLyNhaSach_WS_DAL.pdb
+D:\SkyDrive\Semester 5\Software Analysis and Design\Homeworks\Do an\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_WS_DAL\DoAn_QuanLyNhaSach_WS_DAL\obj\Debug\DoAn_QuanLyNhaSach_WS_DAL.csprojResolveAssemblyReference.cache
+D:\SkyDrive\Semester 5\Software Analysis and Design\Homeworks\Do an\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_WS_DAL\DoAn_QuanLyNhaSach_WS_DAL\obj\Debug\DoAn_QuanLyNhaSach_WS_DAL.dll
+D:\SkyDrive\Semester 5\Software Analysis and Design\Homeworks\Do an\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_WS_DAL\DoAn_QuanLyNhaSach_WS_DAL\obj\Debug\DoAn_QuanLyNhaSach_WS_DAL.pdb

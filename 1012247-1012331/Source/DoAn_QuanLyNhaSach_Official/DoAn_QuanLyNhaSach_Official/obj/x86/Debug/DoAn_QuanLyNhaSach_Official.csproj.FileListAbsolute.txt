@@ -1,0 +1,56 @@
+E:\C#\Projects\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\bin\Debug\DoAn_QuanLyNhaSach_Official.exe
+E:\C#\Projects\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\bin\Debug\DoAn_QuanLyNhaSach_Official.pdb
+E:\C#\Projects\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Properties.Resources.resources
+E:\C#\Projects\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.csproj.GenerateResource.Cache
+E:\C#\Projects\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.exe
+E:\C#\Projects\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.pdb
+E:\C#\Projects\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmMain.resources
+E:\C#\Projects\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmThongTin.resources
+E:\C#\Projects\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmPhieuNhapSach.resources
+E:\C#\Projects\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.csprojResolveAssemblyReference.cache
+E:\C#\Projects\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmTraCuuSach.resources
+E:\C#\Projects\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmHoaDonBanSach.resources
+E:\C#\Projects\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmPhieuThuTien.resources
+E:\C#\Projects\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmBaoCaoNoCong.resources
+E:\C#\Projects\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmBaoCaoTon.resources
+E:\C#\Projects\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmDangNhap.resources
+E:\C#\Projects\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\bin\Debug\DoAn_QuanLyNhaSach_Official.exe.config
+E:\C#\Projects\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmBaoCaoNoCongReport.resources
+E:\C#\Projects\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmBaoCaoTonReport.resources
+E:\University Of Sciences\Semester 5\Software Analysis and Design\Homeworks\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\bin\Debug\DoAn_QuanLyNhaSach_Official.exe.config
+E:\University Of Sciences\Semester 5\Software Analysis and Design\Homeworks\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.exe
+E:\University Of Sciences\Semester 5\Software Analysis and Design\Homeworks\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.pdb
+E:\University Of Sciences\Semester 5\Software Analysis and Design\Homeworks\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\University Of Sciences\Semester 5\Software Analysis and Design\Homeworks\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmBaoCaoNoCong.resources
+E:\University Of Sciences\Semester 5\Software Analysis and Design\Homeworks\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmBaoCaoNoCongReport.resources
+E:\University Of Sciences\Semester 5\Software Analysis and Design\Homeworks\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmBaoCaoTon.resources
+E:\University Of Sciences\Semester 5\Software Analysis and Design\Homeworks\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmBaoCaoTonReport.resources
+E:\University Of Sciences\Semester 5\Software Analysis and Design\Homeworks\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmDangNhap.resources
+E:\University Of Sciences\Semester 5\Software Analysis and Design\Homeworks\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmHoaDonBanSach.resources
+E:\University Of Sciences\Semester 5\Software Analysis and Design\Homeworks\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmMain.resources
+E:\University Of Sciences\Semester 5\Software Analysis and Design\Homeworks\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Properties.Resources.resources
+E:\University Of Sciences\Semester 5\Software Analysis and Design\Homeworks\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmPhieuNhapSach.resources
+E:\University Of Sciences\Semester 5\Software Analysis and Design\Homeworks\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmPhieuThuTien.resources
+E:\University Of Sciences\Semester 5\Software Analysis and Design\Homeworks\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmThongTin.resources
+E:\University Of Sciences\Semester 5\Software Analysis and Design\Homeworks\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmTraCuuSach.resources
+E:\University Of Sciences\Semester 5\Software Analysis and Design\Homeworks\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\University Of Sciences\Semester 5\Software Analysis and Design\Homeworks\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\SkyDrive\Semester 5\Software Analysis and Design\Homeworks\Do an\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\bin\Debug\DoAn_QuanLyNhaSach_Official.exe.config
+D:\SkyDrive\Semester 5\Software Analysis and Design\Homeworks\Do an\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\bin\Debug\DoAn_QuanLyNhaSach_Official.exe
+D:\SkyDrive\Semester 5\Software Analysis and Design\Homeworks\Do an\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\bin\Debug\DoAn_QuanLyNhaSach_Official.pdb
+D:\SkyDrive\Semester 5\Software Analysis and Design\Homeworks\Do an\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.csprojResolveAssemblyReference.cache
+D:\SkyDrive\Semester 5\Software Analysis and Design\Homeworks\Do an\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmBaoCaoNoCong.resources
+D:\SkyDrive\Semester 5\Software Analysis and Design\Homeworks\Do an\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmBaoCaoNoCongReport.resources
+D:\SkyDrive\Semester 5\Software Analysis and Design\Homeworks\Do an\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmBaoCaoTon.resources
+D:\SkyDrive\Semester 5\Software Analysis and Design\Homeworks\Do an\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmBaoCaoTonReport.resources
+D:\SkyDrive\Semester 5\Software Analysis and Design\Homeworks\Do an\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmDangNhap.resources
+D:\SkyDrive\Semester 5\Software Analysis and Design\Homeworks\Do an\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmHoaDonBanSach.resources
+D:\SkyDrive\Semester 5\Software Analysis and Design\Homeworks\Do an\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmMain.resources
+D:\SkyDrive\Semester 5\Software Analysis and Design\Homeworks\Do an\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Properties.Resources.resources
+D:\SkyDrive\Semester 5\Software Analysis and Design\Homeworks\Do an\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmPhieuNhapSach.resources
+D:\SkyDrive\Semester 5\Software Analysis and Design\Homeworks\Do an\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmPhieuThuTien.resources
+D:\SkyDrive\Semester 5\Software Analysis and Design\Homeworks\Do an\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmThongTin.resources
+D:\SkyDrive\Semester 5\Software Analysis and Design\Homeworks\Do an\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.Window_forms.frmTraCuuSach.resources
+D:\SkyDrive\Semester 5\Software Analysis and Design\Homeworks\Do an\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.csproj.GenerateResource.Cache
+D:\SkyDrive\Semester 5\Software Analysis and Design\Homeworks\Do an\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.exe
+D:\SkyDrive\Semester 5\Software Analysis and Design\Homeworks\Do an\Do an\1012247-1012331\Source\DoAn_QuanLyNhaSach_Official\DoAn_QuanLyNhaSach_Official\obj\x86\Debug\DoAn_QuanLyNhaSach_Official.pdb

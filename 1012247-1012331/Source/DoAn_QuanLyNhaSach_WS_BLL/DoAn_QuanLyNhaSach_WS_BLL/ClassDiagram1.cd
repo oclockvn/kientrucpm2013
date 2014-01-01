@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DoAn_QuanLyNhaSach_WS_BLL.BLL.BaoCaoNoCongBLL">
+    <Position X="1" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAIAAAAACAAAACAAAAAAAAA=</HashCode>
+      <FileName>BLL\BaoCaoNoCongBLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAn_QuanLyNhaSach_WS_BLL.BLL.BaoCaoTonBLL">
+    <Position X="3.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAABCAAAAAEAAAAAQAA=</HashCode>
+      <FileName>BLL\BaoCaoTonBLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAn_QuanLyNhaSach_WS_BLL.BLL.ChiTietHoaDonBLL">
+    <Position X="5.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>CAACAAAAAAAAAIAAAAAAAAgAAAABCAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\ChiTietHoaDonBLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAn_QuanLyNhaSach_WS_BLL.BLL.ChiTietPhieuNhapSachBLL">
+    <Position X="1" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAQAAAAAAAQAAEACAAAAAAAAAJAAAA=</HashCode>
+      <FileName>BLL\ChiTietPhieuNhapSachBLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAn_QuanLyNhaSach_WS_BLL.BLL.HoaDonBanSachBLL">
+    <Position X="10" Y="3" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAACAAAIAAAAAAAACAAAgAAAAAACAAA=</HashCode>
+      <FileName>BLL\HoaDonBanSachBLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAn_QuanLyNhaSach_WS_BLL.BLL.KhachHangBLL">
+    <Position X="3.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAIACQAAAACAAAAAAAAAAACAAAGAAAACAAAAAAAAA=</HashCode>
+      <FileName>BLL\KhachHangBLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAn_QuanLyNhaSach_WS_BLL.BLL.PhieuNhapSachBLL">
+    <Position X="7.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAACAACAAAAAAAAACAAAA=</HashCode>
+      <FileName>BLL\PhieuNhapSachBLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAn_QuanLyNhaSach_WS_BLL.BLL.PhieuThuTienBLL">
+    <Position X="5.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAACAQAACAAAAAAAAA=</HashCode>
+      <FileName>BLL\PhieuThuTienBLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAn_QuanLyNhaSach_WS_BLL.BLL.SachBLL">
+    <Position X="7.75" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAIASAAAAEAAAAAAIAAAAAAACAADAAAAICAAgAEAAA=</HashCode>
+      <FileName>BLL\SachBLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAn_QuanLyNhaSach_WS_BLL.BLL.ThamSoBLL">
+    <Position X="10" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAECAkAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\ThamSoBLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoAn_QuanLyNhaSach_WS_BLL.BLL.TheLoaiSachBLL">
+    <Position X="12.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAECAAAAAAAAAAAAAgAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\TheLoaiSachBLL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2B4A0C4E-9140-4653-9F3D-B4E1B131D46E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DoAn_QuanLyNhaSach_WS_BLL</RootNamespace>
+    <AssemblyName>DoAn_QuanLyNhaSach_WS_BLL</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Service References\wsBaoCaoNoCongDAL\DoAn_QuanLyNhaSach_WS_BLL.wsBaoCaoNoCongDAL.BaoCaoNoCongDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsBaoCaoNoCongDAL\wsBaoCaoNoCong.disco" />
+    <None Include="Service References\wsBaoCaoNoCongDAL\configuration91.svcinfo" />
+    <None Include="Service References\wsBaoCaoNoCongDAL\configuration.svcinfo" />
+    <None Include="Service References\wsBaoCaoNoCongDAL\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsBaoCaoTonDAL\DoAn_QuanLyNhaSach_WS_BLL.wsBaoCaoTonDAL.BaoCaoTonDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsBaoCaoTonDAL\wsBaoCaoTon.disco" />
+    <None Include="Service References\wsBaoCaoTonDAL\configuration91.svcinfo" />
+    <None Include="Service References\wsBaoCaoTonDAL\configuration.svcinfo" />
+    <None Include="Service References\wsBaoCaoTonDAL\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsChiTietHoaDonDAL\DoAn_QuanLyNhaSach_WS_BLL.wsChiTietHoaDonDAL.ChiTietHoaDonDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsChiTietHoaDonDAL\wsChiTietHoaDon.disco" />
+    <None Include="Service References\wsChiTietHoaDonDAL\configuration91.svcinfo" />
+    <None Include="Service References\wsChiTietHoaDonDAL\configuration.svcinfo" />
+    <None Include="Service References\wsChiTietHoaDonDAL\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsChiTietPhieuNhapSachDAL\wsChiTietPhieuNhapSach.disco" />
+    <None Include="Service References\wsChiTietPhieuNhapSachDAL\configuration91.svcinfo" />
+    <None Include="Service References\wsChiTietPhieuNhapSachDAL\configuration.svcinfo" />
+    <None Include="Service References\wsChiTietPhieuNhapSachDAL\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsHoaDonBanSachDAL\wsHoaDonBanSach.disco" />
+    <None Include="Service References\wsHoaDonBanSachDAL\configuration91.svcinfo" />
+    <None Include="Service References\wsHoaDonBanSachDAL\configuration.svcinfo" />
+    <None Include="Service References\wsHoaDonBanSachDAL\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsKhachHangDAL\wsKhachHang.disco" />
+    <None Include="Service References\wsKhachHangDAL\configuration91.svcinfo" />
+    <None Include="Service References\wsKhachHangDAL\configuration.svcinfo" />
+    <None Include="Service References\wsKhachHangDAL\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsPhieuNhapSachDAL\wsPhieuNhapSach.disco" />
+    <None Include="Service References\wsPhieuNhapSachDAL\configuration91.svcinfo" />
+    <None Include="Service References\wsPhieuNhapSachDAL\configuration.svcinfo" />
+    <None Include="Service References\wsPhieuNhapSachDAL\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsPhieuThuTienDAL\wsPhieuThuTien.disco" />
+    <None Include="Service References\wsPhieuThuTienDAL\configuration91.svcinfo" />
+    <None Include="Service References\wsPhieuThuTienDAL\configuration.svcinfo" />
+    <None Include="Service References\wsPhieuThuTienDAL\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsSachDAL\wsSach.disco" />
+    <None Include="Service References\wsSachDAL\configuration91.svcinfo" />
+    <None Include="Service References\wsSachDAL\configuration.svcinfo" />
+    <None Include="Service References\wsSachDAL\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsThamSoDAL\wsThamSo.disco" />
+    <None Include="Service References\wsThamSoDAL\configuration91.svcinfo" />
+    <None Include="Service References\wsThamSoDAL\configuration.svcinfo" />
+    <None Include="Service References\wsThamSoDAL\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsTheLoaiSachDAL\wsTheLoaiSach.disco" />
+    <None Include="Service References\wsTheLoaiSachDAL\configuration91.svcinfo" />
+    <None Include="Service References\wsTheLoaiSachDAL\configuration.svcinfo" />
+    <None Include="Service References\wsTheLoaiSachDAL\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="ServicesBLL\wsBaoCaoNoCongBLL.asmx" />
+    <Content Include="ServicesBLL\wsBaoCaoTonBLL.asmx" />
+    <Content Include="ServicesBLL\wsChiTietHoaDonBLL.asmx" />
+    <Content Include="ServicesBLL\wsChiTietPhieuNhapSachBLL.asmx" />
+    <Content Include="ServicesBLL\wsHoaDonBanSachBLL.asmx" />
+    <Content Include="ServicesBLL\wsKhachHangBLL.asmx" />
+    <Content Include="ServicesBLL\wsPhieuNhapSachBLL.asmx" />
+    <Content Include="ServicesBLL\wsPhieuThuTienBLL.asmx" />
+    <Content Include="ServicesBLL\wsSachBLL.asmx" />
+    <Content Include="ServicesBLL\wsThamSoBLL.asmx" />
+    <Content Include="ServicesBLL\wsTheLoaiSachBLL.asmx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <None Include="Service References\wsBaoCaoNoCongDAL\wsBaoCaoNoCong.wsdl" />
+    <None Include="Service References\wsBaoCaoTonDAL\wsBaoCaoTon.wsdl" />
+    <None Include="Service References\wsChiTietHoaDonDAL\wsChiTietHoaDon.wsdl" />
+    <None Include="Service References\wsChiTietPhieuNhapSachDAL\wsChiTietPhieuNhapSach.wsdl" />
+    <None Include="Service References\wsHoaDonBanSachDAL\wsHoaDonBanSach.wsdl" />
+    <None Include="Service References\wsKhachHangDAL\wsKhachHang.wsdl" />
+    <None Include="Service References\wsPhieuNhapSachDAL\wsPhieuNhapSach.wsdl" />
+    <None Include="Service References\wsPhieuThuTienDAL\wsPhieuThuTien.wsdl" />
+    <None Include="Service References\wsSachDAL\wsSach.wsdl" />
+    <None Include="Service References\wsThamSoDAL\wsThamSo.wsdl" />
+    <None Include="Service References\wsTheLoaiSachDAL\wsTheLoaiSach.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\BaoCaoNoCongBLL.cs" />
+    <Compile Include="BLL\BaoCaoTonBLL.cs" />
+    <Compile Include="BLL\ChiTietHoaDonBLL.cs" />
+    <Compile Include="BLL\ChiTietPhieuNhapSachBLL.cs" />
+    <Compile Include="BLL\HoaDonBanSachBLL.cs" />
+    <Compile Include="BLL\KhachHangBLL.cs" />
+    <Compile Include="BLL\PhieuNhapSachBLL.cs" />
+    <Compile Include="BLL\PhieuThuTienBLL.cs" />
+    <Compile Include="BLL\SachBLL.cs" />
+    <Compile Include="BLL\ThamSoBLL.cs" />
+    <Compile Include="BLL\TheLoaiSachBLL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\wsBaoCaoNoCongDAL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsBaoCaoTonDAL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsChiTietHoaDonDAL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsChiTietPhieuNhapSachDAL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsHoaDonBanSachDAL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsKhachHangDAL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsPhieuNhapSachDAL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsPhieuThuTienDAL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsSachDAL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsThamSoDAL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsTheLoaiSachDAL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ServicesBLL\wsBaoCaoNoCongBLL.asmx.cs">
+      <DependentUpon>wsBaoCaoNoCongBLL.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ServicesBLL\wsBaoCaoTonBLL.asmx.cs">
+      <DependentUpon>wsBaoCaoTonBLL.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ServicesBLL\wsChiTietHoaDonBLL.asmx.cs">
+      <DependentUpon>wsChiTietHoaDonBLL.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ServicesBLL\wsChiTietPhieuNhapSachBLL.asmx.cs">
+      <DependentUpon>wsChiTietPhieuNhapSachBLL.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ServicesBLL\wsHoaDonBanSachBLL.asmx.cs">
+      <DependentUpon>wsHoaDonBanSachBLL.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ServicesBLL\wsKhachHangBLL.asmx.cs">
+      <DependentUpon>wsKhachHangBLL.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ServicesBLL\wsPhieuNhapSachBLL.asmx.cs">
+      <DependentUpon>wsPhieuNhapSachBLL.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ServicesBLL\wsPhieuThuTienBLL.asmx.cs">
+      <DependentUpon>wsPhieuThuTienBLL.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ServicesBLL\wsSachBLL.asmx.cs">
+      <DependentUpon>wsSachBLL.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ServicesBLL\wsThamSoBLL.asmx.cs">
+      <DependentUpon>wsThamSoBLL.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ServicesBLL\wsTheLoaiSachBLL.asmx.cs">
+      <DependentUpon>wsTheLoaiSachBLL.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\wsBaoCaoNoCongDAL\" />
+    <WCFMetadataStorage Include="Service References\wsBaoCaoTonDAL\" />
+    <WCFMetadataStorage Include="Service References\wsChiTietHoaDonDAL\" />
+    <WCFMetadataStorage Include="Service References\wsChiTietPhieuNhapSachDAL\" />
+    <WCFMetadataStorage Include="Service References\wsHoaDonBanSachDAL\" />
+    <WCFMetadataStorage Include="Service References\wsKhachHangDAL\" />
+    <WCFMetadataStorage Include="Service References\wsPhieuNhapSachDAL\" />
+    <WCFMetadataStorage Include="Service References\wsPhieuThuTienDAL\" />
+    <WCFMetadataStorage Include="Service References\wsSachDAL\" />
+    <WCFMetadataStorage Include="Service References\wsThamSoDAL\" />
+    <WCFMetadataStorage Include="Service References\wsTheLoaiSachDAL\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>1606</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

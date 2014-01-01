@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getListTheLoaiSach">
+        <s:complexType />
+      </s:element>
+      <s:element name="getListTheLoaiSachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getListTheLoaiSachResult" type="tns:ArrayOfTheLoaiSachDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTheLoaiSachDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TheLoaiSachDTO" nillable="true" type="tns:TheLoaiSachDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TheLoaiSachDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenTheLoai" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaTheLoai" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ExtensionDataObject" />
+      <s:element name="getMaTheLoai">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tentheloai" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMaTheLoaiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getMaTheLoaiResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTenTheLoai">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="matheloai" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTenTheLoaiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getTenTheLoaiResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getListTheLoaiSachSoapIn">
+    <wsdl:part name="parameters" element="tns:getListTheLoaiSach" />
+  </wsdl:message>
+  <wsdl:message name="getListTheLoaiSachSoapOut">
+    <wsdl:part name="parameters" element="tns:getListTheLoaiSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMaTheLoaiSoapIn">
+    <wsdl:part name="parameters" element="tns:getMaTheLoai" />
+  </wsdl:message>
+  <wsdl:message name="getMaTheLoaiSoapOut">
+    <wsdl:part name="parameters" element="tns:getMaTheLoaiResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTenTheLoaiSoapIn">
+    <wsdl:part name="parameters" element="tns:getTenTheLoai" />
+  </wsdl:message>
+  <wsdl:message name="getTenTheLoaiSoapOut">
+    <wsdl:part name="parameters" element="tns:getTenTheLoaiResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsTheLoaiSachBLLSoap">
+    <wsdl:operation name="getListTheLoaiSach">
+      <wsdl:input message="tns:getListTheLoaiSachSoapIn" />
+      <wsdl:output message="tns:getListTheLoaiSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getMaTheLoai">
+      <wsdl:input message="tns:getMaTheLoaiSoapIn" />
+      <wsdl:output message="tns:getMaTheLoaiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getTenTheLoai">
+      <wsdl:input message="tns:getTenTheLoaiSoapIn" />
+      <wsdl:output message="tns:getTenTheLoaiSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsTheLoaiSachBLLSoap" type="tns:wsTheLoaiSachBLLSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getListTheLoaiSach">
+      <soap:operation soapAction="http://tempuri.org/getListTheLoaiSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMaTheLoai">
+      <soap:operation soapAction="http://tempuri.org/getMaTheLoai" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTenTheLoai">
+      <soap:operation soapAction="http://tempuri.org/getTenTheLoai" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsTheLoaiSachBLLSoap12" type="tns:wsTheLoaiSachBLLSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getListTheLoaiSach">
+      <soap12:operation soapAction="http://tempuri.org/getListTheLoaiSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMaTheLoai">
+      <soap12:operation soapAction="http://tempuri.org/getMaTheLoai" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTenTheLoai">
+      <soap12:operation soapAction="http://tempuri.org/getTenTheLoai" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsTheLoaiSachBLL">
+    <wsdl:port name="wsTheLoaiSachBLLSoap" binding="tns:wsTheLoaiSachBLLSoap">
+      <soap:address location="http://localhost:1606/ServicesBLL/wsTheLoaiSachBLL.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsTheLoaiSachBLLSoap12" binding="tns:wsTheLoaiSachBLLSoap12">
+      <soap12:address location="http://localhost:1606/ServicesBLL/wsTheLoaiSachBLL.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

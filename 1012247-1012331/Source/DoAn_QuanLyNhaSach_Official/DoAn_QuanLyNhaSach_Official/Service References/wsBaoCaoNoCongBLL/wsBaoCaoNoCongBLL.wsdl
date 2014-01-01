@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getListBaoCaoNoCong">
+        <s:complexType />
+      </s:element>
+      <s:element name="getListBaoCaoNoCongResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getListBaoCaoNoCongResult" type="tns:ArrayOfBaoCaoNoCongDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfBaoCaoNoCongDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BaoCaoNoCongDTO" nillable="true" type="tns:BaoCaoNoCongDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BaoCaoNoCongDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="1" maxOccurs="1" name="NoCuoi" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PhatSinh" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NoDau" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaKhachHang" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Thang" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaBaoCaoNoCong" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ExtensionDataObject" />
+      <s:element name="insertBaoCaoNoCong">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="baocaoDTO" type="tns:BaoCaoNoCongDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertBaoCaoNoCongResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="updateBaoCaoNoCong">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="baocaoDTO" type="tns:BaoCaoNoCongDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateBaoCaoNoCongResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="deleteBaoCaoNoCong">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="baocaoDTO" type="tns:BaoCaoNoCongDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteBaoCaoNoCongResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getListBaoCaoNoCongSoapIn">
+    <wsdl:part name="parameters" element="tns:getListBaoCaoNoCong" />
+  </wsdl:message>
+  <wsdl:message name="getListBaoCaoNoCongSoapOut">
+    <wsdl:part name="parameters" element="tns:getListBaoCaoNoCongResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertBaoCaoNoCongSoapIn">
+    <wsdl:part name="parameters" element="tns:insertBaoCaoNoCong" />
+  </wsdl:message>
+  <wsdl:message name="insertBaoCaoNoCongSoapOut">
+    <wsdl:part name="parameters" element="tns:insertBaoCaoNoCongResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateBaoCaoNoCongSoapIn">
+    <wsdl:part name="parameters" element="tns:updateBaoCaoNoCong" />
+  </wsdl:message>
+  <wsdl:message name="updateBaoCaoNoCongSoapOut">
+    <wsdl:part name="parameters" element="tns:updateBaoCaoNoCongResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteBaoCaoNoCongSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteBaoCaoNoCong" />
+  </wsdl:message>
+  <wsdl:message name="deleteBaoCaoNoCongSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteBaoCaoNoCongResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsBaoCaoNoCongBLLSoap">
+    <wsdl:operation name="getListBaoCaoNoCong">
+      <wsdl:input message="tns:getListBaoCaoNoCongSoapIn" />
+      <wsdl:output message="tns:getListBaoCaoNoCongSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertBaoCaoNoCong">
+      <wsdl:input message="tns:insertBaoCaoNoCongSoapIn" />
+      <wsdl:output message="tns:insertBaoCaoNoCongSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateBaoCaoNoCong">
+      <wsdl:input message="tns:updateBaoCaoNoCongSoapIn" />
+      <wsdl:output message="tns:updateBaoCaoNoCongSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteBaoCaoNoCong">
+      <wsdl:input message="tns:deleteBaoCaoNoCongSoapIn" />
+      <wsdl:output message="tns:deleteBaoCaoNoCongSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsBaoCaoNoCongBLLSoap" type="tns:wsBaoCaoNoCongBLLSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getListBaoCaoNoCong">
+      <soap:operation soapAction="http://tempuri.org/getListBaoCaoNoCong" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertBaoCaoNoCong">
+      <soap:operation soapAction="http://tempuri.org/insertBaoCaoNoCong" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateBaoCaoNoCong">
+      <soap:operation soapAction="http://tempuri.org/updateBaoCaoNoCong" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteBaoCaoNoCong">
+      <soap:operation soapAction="http://tempuri.org/deleteBaoCaoNoCong" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsBaoCaoNoCongBLLSoap12" type="tns:wsBaoCaoNoCongBLLSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getListBaoCaoNoCong">
+      <soap12:operation soapAction="http://tempuri.org/getListBaoCaoNoCong" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertBaoCaoNoCong">
+      <soap12:operation soapAction="http://tempuri.org/insertBaoCaoNoCong" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateBaoCaoNoCong">
+      <soap12:operation soapAction="http://tempuri.org/updateBaoCaoNoCong" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteBaoCaoNoCong">
+      <soap12:operation soapAction="http://tempuri.org/deleteBaoCaoNoCong" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsBaoCaoNoCongBLL">
+    <wsdl:port name="wsBaoCaoNoCongBLLSoap" binding="tns:wsBaoCaoNoCongBLLSoap">
+      <soap:address location="http://localhost:1606/ServicesBLL/wsBaoCaoNoCongBLL.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsBaoCaoNoCongBLLSoap12" binding="tns:wsBaoCaoNoCongBLLSoap12">
+      <soap12:address location="http://localhost:1606/ServicesBLL/wsBaoCaoNoCongBLL.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A9AA9F44-A4FD-414F-869E-29ABBADE7CB3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DoAn_QuanLyNhaSach_Official</RootNamespace>
+    <AssemblyName>DoAn_QuanLyNhaSach_Official</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Address-Book.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="rptNoCong.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptNoCong.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptTon.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTon.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service References\wsBaoCaoNoCongBLL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsBaoCaoTonBLL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsChiTietHoaDonBLL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsChiTietPhieuNhapSachBLL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsHoaDonBanSachBLL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsKhachHangBLL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsPhieuNhapSachBLL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsPhieuThuTienBLL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsSachBLL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsThamSoBLL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsTheLoaiSachBLL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Window forms\frmBaoCaoNoCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window forms\frmBaoCaoNoCong.Designer.cs">
+      <DependentUpon>frmBaoCaoNoCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Window forms\frmBaoCaoNoCongReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window forms\frmBaoCaoNoCongReport.Designer.cs">
+      <DependentUpon>frmBaoCaoNoCongReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Window forms\frmBaoCaoTon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window forms\frmBaoCaoTon.Designer.cs">
+      <DependentUpon>frmBaoCaoTon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Window forms\frmBaoCaoTonReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window forms\frmBaoCaoTonReport.Designer.cs">
+      <DependentUpon>frmBaoCaoTonReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Window forms\frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window forms\frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Window forms\frmHoaDonBanSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window forms\frmHoaDonBanSach.Designer.cs">
+      <DependentUpon>frmHoaDonBanSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Window forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Window forms\frmPhieuNhapSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window forms\frmPhieuNhapSach.Designer.cs">
+      <DependentUpon>frmPhieuNhapSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Window forms\frmPhieuThuTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window forms\frmPhieuThuTien.Designer.cs">
+      <DependentUpon>frmPhieuThuTien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Window forms\frmThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window forms\frmThongTin.Designer.cs">
+      <DependentUpon>frmThongTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Window forms\frmTraCuuSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window forms\frmTraCuuSach.Designer.cs">
+      <DependentUpon>frmTraCuuSach.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="rptNoCong.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptNoCong.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptTon.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTon.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window forms\frmBaoCaoNoCong.resx">
+      <DependentUpon>frmBaoCaoNoCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window forms\frmBaoCaoNoCongReport.resx">
+      <DependentUpon>frmBaoCaoNoCongReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window forms\frmBaoCaoTon.resx">
+      <DependentUpon>frmBaoCaoTon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window forms\frmBaoCaoTonReport.resx">
+      <DependentUpon>frmBaoCaoTonReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window forms\frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window forms\frmHoaDonBanSach.resx">
+      <DependentUpon>frmHoaDonBanSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Window forms\frmPhieuNhapSach.resx">
+      <DependentUpon>frmPhieuNhapSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window forms\frmPhieuThuTien.resx">
+      <DependentUpon>frmPhieuThuTien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window forms\frmThongTin.resx">
+      <DependentUpon>frmThongTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window forms\frmTraCuuSach.resx">
+      <DependentUpon>frmTraCuuSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\wsBaoCaoNoCongBLL\wsBaoCaoNoCongBLL.wsdl" />
+    <None Include="Service References\wsBaoCaoTonBLL\wsBaoCaoTonBLL.wsdl" />
+    <None Include="Service References\wsChiTietHoaDonBLL\wsChiTietHoaDonBLL.wsdl" />
+    <None Include="Service References\wsChiTietPhieuNhapSachBLL\wsChiTietPhieuNhapSachBLL.wsdl" />
+    <None Include="Service References\wsHoaDonBanSachBLL\wsHoaDonBanSachBLL.wsdl" />
+    <None Include="Service References\wsKhachHangBLL\wsKhachHangBLL.wsdl" />
+    <None Include="Service References\wsPhieuNhapSachBLL\wsPhieuNhapSachBLL.wsdl" />
+    <None Include="Service References\wsPhieuThuTienBLL\wsPhieuThuTienBLL.wsdl" />
+    <None Include="Service References\wsSachBLL\wsSachBLL.wsdl" />
+    <None Include="Service References\wsThamSoBLL\wsThamSoBLL.wsdl" />
+    <None Include="Service References\wsTheLoaiSachBLL\wsTheLoaiSachBLL.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thongtin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sinchronize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_stack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magazine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purchase_order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Address-Book.ico" />
+    <None Include="Service References\wsTheLoaiSachBLL\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsTheLoaiSachBLL\configuration.svcinfo" />
+    <None Include="Service References\wsTheLoaiSachBLL\configuration91.svcinfo" />
+    <None Include="Service References\wsTheLoaiSachBLL\wsTheLoaiSachBLL.disco" />
+    <None Include="Service References\wsThamSoBLL\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsThamSoBLL\configuration.svcinfo" />
+    <None Include="Service References\wsThamSoBLL\configuration91.svcinfo" />
+    <None Include="Service References\wsThamSoBLL\wsThamSoBLL.disco" />
+    <None Include="Service References\wsSachBLL\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsSachBLL\configuration.svcinfo" />
+    <None Include="Service References\wsSachBLL\configuration91.svcinfo" />
+    <None Include="Service References\wsSachBLL\wsSachBLL.disco" />
+    <None Include="Service References\wsPhieuThuTienBLL\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsPhieuThuTienBLL\configuration.svcinfo" />
+    <None Include="Service References\wsPhieuThuTienBLL\configuration91.svcinfo" />
+    <None Include="Service References\wsPhieuThuTienBLL\wsPhieuThuTienBLL.disco" />
+    <None Include="Service References\wsPhieuNhapSachBLL\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsPhieuNhapSachBLL\configuration.svcinfo" />
+    <None Include="Service References\wsPhieuNhapSachBLL\configuration91.svcinfo" />
+    <None Include="Service References\wsPhieuNhapSachBLL\wsPhieuNhapSachBLL.disco" />
+    <None Include="Service References\wsKhachHangBLL\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsKhachHangBLL\configuration.svcinfo" />
+    <None Include="Service References\wsKhachHangBLL\configuration91.svcinfo" />
+    <None Include="Service References\wsKhachHangBLL\wsKhachHangBLL.disco" />
+    <None Include="Service References\wsHoaDonBanSachBLL\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsHoaDonBanSachBLL\configuration.svcinfo" />
+    <None Include="Service References\wsHoaDonBanSachBLL\configuration91.svcinfo" />
+    <None Include="Service References\wsHoaDonBanSachBLL\wsHoaDonBanSachBLL.disco" />
+    <None Include="Service References\wsChiTietPhieuNhapSachBLL\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsChiTietPhieuNhapSachBLL\configuration.svcinfo" />
+    <None Include="Service References\wsChiTietPhieuNhapSachBLL\configuration91.svcinfo" />
+    <None Include="Service References\wsChiTietPhieuNhapSachBLL\wsChiTietPhieuNhapSachBLL.disco" />
+    <None Include="Service References\wsChiTietHoaDonBLL\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsChiTietHoaDonBLL\configuration.svcinfo" />
+    <None Include="Service References\wsChiTietHoaDonBLL\configuration91.svcinfo" />
+    <None Include="Service References\wsChiTietHoaDonBLL\wsChiTietHoaDonBLL.disco" />
+    <None Include="Service References\wsBaoCaoTonBLL\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsBaoCaoTonBLL\configuration.svcinfo" />
+    <None Include="Service References\wsBaoCaoTonBLL\configuration91.svcinfo" />
+    <None Include="Service References\wsBaoCaoTonBLL\wsBaoCaoTonBLL.disco" />
+    <None Include="Service References\wsBaoCaoNoCongBLL\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsBaoCaoNoCongBLL\configuration.svcinfo" />
+    <None Include="Service References\wsBaoCaoNoCongBLL\configuration91.svcinfo" />
+    <None Include="Service References\wsBaoCaoNoCongBLL\wsBaoCaoNoCongBLL.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\wsBaoCaoNoCongBLL\" />
+    <WCFMetadataStorage Include="Service References\wsBaoCaoTonBLL\" />
+    <WCFMetadataStorage Include="Service References\wsChiTietHoaDonBLL\" />
+    <WCFMetadataStorage Include="Service References\wsChiTietPhieuNhapSachBLL\" />
+    <WCFMetadataStorage Include="Service References\wsHoaDonBanSachBLL\" />
+    <WCFMetadataStorage Include="Service References\wsKhachHangBLL\" />
+    <WCFMetadataStorage Include="Service References\wsPhieuNhapSachBLL\" />
+    <WCFMetadataStorage Include="Service References\wsPhieuThuTienBLL\" />
+    <WCFMetadataStorage Include="Service References\wsSachBLL\" />
+    <WCFMetadataStorage Include="Service References\wsThamSoBLL\" />
+    <WCFMetadataStorage Include="Service References\wsTheLoaiSachBLL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,1 @@
+Can chay 2 service DAL va BLL de chay duoc file exe nay.

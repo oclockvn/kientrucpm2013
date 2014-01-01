@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListSach">
+        <s:complexType />
+      </s:element>
+      <s:element name="getListSachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getListSachResult" type="tns:ArrayOfSachDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSachDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SachDTO" nillable="true" type="tns:SachDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SachDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SoLuongTon" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DonGia" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TacGia" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaTheLoai" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenSach" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaSach" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="insertSach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sach" type="tns:SachDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertSachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertSachResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteSach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sach" type="tns:SachDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteSachResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="updateSach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sach" type="tns:SachDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateSachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateSachResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSoLuongTon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tensach" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSoLuongTonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getSoLuongTonResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDonGiaSach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tensach" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="masach" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDonGiaSachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getDonGiaSachResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMaTheLoaiSach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="masach" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMaTheLoaiSachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getMaTheLoaiSachResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkIsExistBook">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="masach" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkIsExistBookResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="checkIsExistBookResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="searchSach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sach" type="tns:SachDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="searchSachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="searchSachResult" type="tns:ArrayOfSachDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="searchSachByCatalog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sach" type="tns:SachDTO" />
+            <s:element minOccurs="0" maxOccurs="1" name="muc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="searchSachByCatalogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="searchSachByCatalogResult" type="tns:ArrayOfSachDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMaSach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tensach" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMaSachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getMaSachResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="getListSachSoapIn">
+    <wsdl:part name="parameters" element="tns:getListSach" />
+  </wsdl:message>
+  <wsdl:message name="getListSachSoapOut">
+    <wsdl:part name="parameters" element="tns:getListSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertSachSoapIn">
+    <wsdl:part name="parameters" element="tns:insertSach" />
+  </wsdl:message>
+  <wsdl:message name="insertSachSoapOut">
+    <wsdl:part name="parameters" element="tns:insertSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteSachSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteSach" />
+  </wsdl:message>
+  <wsdl:message name="deleteSachSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateSachSoapIn">
+    <wsdl:part name="parameters" element="tns:updateSach" />
+  </wsdl:message>
+  <wsdl:message name="updateSachSoapOut">
+    <wsdl:part name="parameters" element="tns:updateSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSoLuongTonSoapIn">
+    <wsdl:part name="parameters" element="tns:getSoLuongTon" />
+  </wsdl:message>
+  <wsdl:message name="getSoLuongTonSoapOut">
+    <wsdl:part name="parameters" element="tns:getSoLuongTonResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDonGiaSachSoapIn">
+    <wsdl:part name="parameters" element="tns:getDonGiaSach" />
+  </wsdl:message>
+  <wsdl:message name="getDonGiaSachSoapOut">
+    <wsdl:part name="parameters" element="tns:getDonGiaSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMaTheLoaiSachSoapIn">
+    <wsdl:part name="parameters" element="tns:getMaTheLoaiSach" />
+  </wsdl:message>
+  <wsdl:message name="getMaTheLoaiSachSoapOut">
+    <wsdl:part name="parameters" element="tns:getMaTheLoaiSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkIsExistBookSoapIn">
+    <wsdl:part name="parameters" element="tns:checkIsExistBook" />
+  </wsdl:message>
+  <wsdl:message name="checkIsExistBookSoapOut">
+    <wsdl:part name="parameters" element="tns:checkIsExistBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchSachSoapIn">
+    <wsdl:part name="parameters" element="tns:searchSach" />
+  </wsdl:message>
+  <wsdl:message name="searchSachSoapOut">
+    <wsdl:part name="parameters" element="tns:searchSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="searchSachByCatalogSoapIn">
+    <wsdl:part name="parameters" element="tns:searchSachByCatalog" />
+  </wsdl:message>
+  <wsdl:message name="searchSachByCatalogSoapOut">
+    <wsdl:part name="parameters" element="tns:searchSachByCatalogResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMaSachSoapIn">
+    <wsdl:part name="parameters" element="tns:getMaSach" />
+  </wsdl:message>
+  <wsdl:message name="getMaSachSoapOut">
+    <wsdl:part name="parameters" element="tns:getMaSachResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsSachSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListSach">
+      <wsdl:input message="tns:getListSachSoapIn" />
+      <wsdl:output message="tns:getListSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertSach">
+      <wsdl:input message="tns:insertSachSoapIn" />
+      <wsdl:output message="tns:insertSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteSach">
+      <wsdl:input message="tns:deleteSachSoapIn" />
+      <wsdl:output message="tns:deleteSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateSach">
+      <wsdl:input message="tns:updateSachSoapIn" />
+      <wsdl:output message="tns:updateSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSoLuongTon">
+      <wsdl:input message="tns:getSoLuongTonSoapIn" />
+      <wsdl:output message="tns:getSoLuongTonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDonGiaSach">
+      <wsdl:input message="tns:getDonGiaSachSoapIn" />
+      <wsdl:output message="tns:getDonGiaSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getMaTheLoaiSach">
+      <wsdl:input message="tns:getMaTheLoaiSachSoapIn" />
+      <wsdl:output message="tns:getMaTheLoaiSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkIsExistBook">
+      <wsdl:input message="tns:checkIsExistBookSoapIn" />
+      <wsdl:output message="tns:checkIsExistBookSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="searchSach">
+      <wsdl:input message="tns:searchSachSoapIn" />
+      <wsdl:output message="tns:searchSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="searchSachByCatalog">
+      <wsdl:input message="tns:searchSachByCatalogSoapIn" />
+      <wsdl:output message="tns:searchSachByCatalogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getMaSach">
+      <wsdl:input message="tns:getMaSachSoapIn" />
+      <wsdl:output message="tns:getMaSachSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsSachSoap" type="tns:wsSachSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListSach">
+      <soap:operation soapAction="http://tempuri.org/getListSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertSach">
+      <soap:operation soapAction="http://tempuri.org/insertSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteSach">
+      <soap:operation soapAction="http://tempuri.org/deleteSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateSach">
+      <soap:operation soapAction="http://tempuri.org/updateSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSoLuongTon">
+      <soap:operation soapAction="http://tempuri.org/getSoLuongTon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDonGiaSach">
+      <soap:operation soapAction="http://tempuri.org/getDonGiaSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMaTheLoaiSach">
+      <soap:operation soapAction="http://tempuri.org/getMaTheLoaiSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkIsExistBook">
+      <soap:operation soapAction="http://tempuri.org/checkIsExistBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchSach">
+      <soap:operation soapAction="http://tempuri.org/searchSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchSachByCatalog">
+      <soap:operation soapAction="http://tempuri.org/searchSachByCatalog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMaSach">
+      <soap:operation soapAction="http://tempuri.org/getMaSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsSachSoap12" type="tns:wsSachSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListSach">
+      <soap12:operation soapAction="http://tempuri.org/getListSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertSach">
+      <soap12:operation soapAction="http://tempuri.org/insertSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteSach">
+      <soap12:operation soapAction="http://tempuri.org/deleteSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateSach">
+      <soap12:operation soapAction="http://tempuri.org/updateSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSoLuongTon">
+      <soap12:operation soapAction="http://tempuri.org/getSoLuongTon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDonGiaSach">
+      <soap12:operation soapAction="http://tempuri.org/getDonGiaSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMaTheLoaiSach">
+      <soap12:operation soapAction="http://tempuri.org/getMaTheLoaiSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkIsExistBook">
+      <soap12:operation soapAction="http://tempuri.org/checkIsExistBook" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchSach">
+      <soap12:operation soapAction="http://tempuri.org/searchSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchSachByCatalog">
+      <soap12:operation soapAction="http://tempuri.org/searchSachByCatalog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMaSach">
+      <soap12:operation soapAction="http://tempuri.org/getMaSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsSach">
+    <wsdl:port name="wsSachSoap" binding="tns:wsSachSoap">
+      <soap:address location="http://localhost:1604/Services/wsSach.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsSachSoap12" binding="tns:wsSachSoap12">
+      <soap12:address location="http://localhost:1604/Services/wsSach.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

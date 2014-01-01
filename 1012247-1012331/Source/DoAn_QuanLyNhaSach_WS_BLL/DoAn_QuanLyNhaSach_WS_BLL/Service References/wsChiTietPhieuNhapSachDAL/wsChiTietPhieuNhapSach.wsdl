@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getListChiTietPhieuNhapSach">
+        <s:complexType />
+      </s:element>
+      <s:element name="getListChiTietPhieuNhapSachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getListChiTietPhieuNhapSachResult" type="tns:ArrayOfChiTietPhieuNhapSachDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfChiTietPhieuNhapSachDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ChiTietPhieuNhapSachDTO" nillable="true" type="tns:ChiTietPhieuNhapSachDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ChiTietPhieuNhapSachDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SoLuong" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaSach" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaChiTietPhieuNhapSach" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="insertChiTietPhieuNhapSach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="chitiet" type="tns:ChiTietPhieuNhapSachDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertChiTietPhieuNhapSachResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="deleteChiTietPhieuNhapSach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="chitiet" type="tns:ChiTietPhieuNhapSachDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteChiTietPhieuNhapSachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deleteChiTietPhieuNhapSachResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateChiTietPhieuNhapSach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="chitiet" type="tns:ChiTietPhieuNhapSachDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateChiTietPhieuNhapSachResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="getSoLuongSachNhap">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="masach" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSoLuongSachNhapResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getSoLuongSachNhapResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMaChiTietPhieuNhapSach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="masach" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMaChiTietPhieuNhapSachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getMaChiTietPhieuNhapSachResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getListChiTietPhieuNhapSachSoapIn">
+    <wsdl:part name="parameters" element="tns:getListChiTietPhieuNhapSach" />
+  </wsdl:message>
+  <wsdl:message name="getListChiTietPhieuNhapSachSoapOut">
+    <wsdl:part name="parameters" element="tns:getListChiTietPhieuNhapSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertChiTietPhieuNhapSachSoapIn">
+    <wsdl:part name="parameters" element="tns:insertChiTietPhieuNhapSach" />
+  </wsdl:message>
+  <wsdl:message name="insertChiTietPhieuNhapSachSoapOut">
+    <wsdl:part name="parameters" element="tns:insertChiTietPhieuNhapSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteChiTietPhieuNhapSachSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteChiTietPhieuNhapSach" />
+  </wsdl:message>
+  <wsdl:message name="deleteChiTietPhieuNhapSachSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteChiTietPhieuNhapSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateChiTietPhieuNhapSachSoapIn">
+    <wsdl:part name="parameters" element="tns:updateChiTietPhieuNhapSach" />
+  </wsdl:message>
+  <wsdl:message name="updateChiTietPhieuNhapSachSoapOut">
+    <wsdl:part name="parameters" element="tns:updateChiTietPhieuNhapSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSoLuongSachNhapSoapIn">
+    <wsdl:part name="parameters" element="tns:getSoLuongSachNhap" />
+  </wsdl:message>
+  <wsdl:message name="getSoLuongSachNhapSoapOut">
+    <wsdl:part name="parameters" element="tns:getSoLuongSachNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMaChiTietPhieuNhapSachSoapIn">
+    <wsdl:part name="parameters" element="tns:getMaChiTietPhieuNhapSach" />
+  </wsdl:message>
+  <wsdl:message name="getMaChiTietPhieuNhapSachSoapOut">
+    <wsdl:part name="parameters" element="tns:getMaChiTietPhieuNhapSachResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsChiTietPhieuNhapSachSoap">
+    <wsdl:operation name="getListChiTietPhieuNhapSach">
+      <wsdl:input message="tns:getListChiTietPhieuNhapSachSoapIn" />
+      <wsdl:output message="tns:getListChiTietPhieuNhapSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertChiTietPhieuNhapSach">
+      <wsdl:input message="tns:insertChiTietPhieuNhapSachSoapIn" />
+      <wsdl:output message="tns:insertChiTietPhieuNhapSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteChiTietPhieuNhapSach">
+      <wsdl:input message="tns:deleteChiTietPhieuNhapSachSoapIn" />
+      <wsdl:output message="tns:deleteChiTietPhieuNhapSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateChiTietPhieuNhapSach">
+      <wsdl:input message="tns:updateChiTietPhieuNhapSachSoapIn" />
+      <wsdl:output message="tns:updateChiTietPhieuNhapSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSoLuongSachNhap">
+      <wsdl:input message="tns:getSoLuongSachNhapSoapIn" />
+      <wsdl:output message="tns:getSoLuongSachNhapSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getMaChiTietPhieuNhapSach">
+      <wsdl:input message="tns:getMaChiTietPhieuNhapSachSoapIn" />
+      <wsdl:output message="tns:getMaChiTietPhieuNhapSachSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsChiTietPhieuNhapSachSoap" type="tns:wsChiTietPhieuNhapSachSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getListChiTietPhieuNhapSach">
+      <soap:operation soapAction="http://tempuri.org/getListChiTietPhieuNhapSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertChiTietPhieuNhapSach">
+      <soap:operation soapAction="http://tempuri.org/insertChiTietPhieuNhapSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteChiTietPhieuNhapSach">
+      <soap:operation soapAction="http://tempuri.org/deleteChiTietPhieuNhapSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateChiTietPhieuNhapSach">
+      <soap:operation soapAction="http://tempuri.org/updateChiTietPhieuNhapSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSoLuongSachNhap">
+      <soap:operation soapAction="http://tempuri.org/getSoLuongSachNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMaChiTietPhieuNhapSach">
+      <soap:operation soapAction="http://tempuri.org/getMaChiTietPhieuNhapSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsChiTietPhieuNhapSachSoap12" type="tns:wsChiTietPhieuNhapSachSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getListChiTietPhieuNhapSach">
+      <soap12:operation soapAction="http://tempuri.org/getListChiTietPhieuNhapSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertChiTietPhieuNhapSach">
+      <soap12:operation soapAction="http://tempuri.org/insertChiTietPhieuNhapSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteChiTietPhieuNhapSach">
+      <soap12:operation soapAction="http://tempuri.org/deleteChiTietPhieuNhapSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateChiTietPhieuNhapSach">
+      <soap12:operation soapAction="http://tempuri.org/updateChiTietPhieuNhapSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSoLuongSachNhap">
+      <soap12:operation soapAction="http://tempuri.org/getSoLuongSachNhap" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMaChiTietPhieuNhapSach">
+      <soap12:operation soapAction="http://tempuri.org/getMaChiTietPhieuNhapSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsChiTietPhieuNhapSach">
+    <wsdl:port name="wsChiTietPhieuNhapSachSoap" binding="tns:wsChiTietPhieuNhapSachSoap">
+      <soap:address location="http://localhost:1604/Services/wsChiTietPhieuNhapSach.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsChiTietPhieuNhapSachSoap12" binding="tns:wsChiTietPhieuNhapSachSoap12">
+      <soap12:address location="http://localhost:1604/Services/wsChiTietPhieuNhapSach.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

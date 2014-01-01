@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DoAn> 
+	<TenDoAn>Quan ly nha sach</TenDoAn>
+	<Link>http://www.mediafire.com/?g881sjyuq5g218s</Link>
+</DoAn>
+<SinhVien>
+	<SinhVien MSSV="1012247">
+		<Ten>Vo Hoai Nam</Ten>
+	</SinhVien>
+	<SinhVien MSSV="1012331">
+		<Ten>Phan Tien Quang</Ten>
+	</SinhVien>
+</DoAn>

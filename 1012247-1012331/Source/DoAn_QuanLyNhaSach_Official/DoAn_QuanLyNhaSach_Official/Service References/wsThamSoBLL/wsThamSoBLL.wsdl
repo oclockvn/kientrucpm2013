@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getSoLuongNhapMin">
+        <s:complexType />
+      </s:element>
+      <s:element name="getSoLuongNhapMinResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getSoLuongNhapMinResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSoLuongTonMax">
+        <s:complexType />
+      </s:element>
+      <s:element name="getSoLuongTonMaxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getSoLuongTonMaxResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSoTienKhachHangNoMax">
+        <s:complexType />
+      </s:element>
+      <s:element name="getSoTienKhachHangNoMaxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getSoTienKhachHangNoMaxResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSoLuongTonSauBanMin">
+        <s:complexType />
+      </s:element>
+      <s:element name="getSoLuongTonSauBanMinResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getSoLuongTonSauBanMinResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getSoLuongNhapMinSoapIn">
+    <wsdl:part name="parameters" element="tns:getSoLuongNhapMin" />
+  </wsdl:message>
+  <wsdl:message name="getSoLuongNhapMinSoapOut">
+    <wsdl:part name="parameters" element="tns:getSoLuongNhapMinResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSoLuongTonMaxSoapIn">
+    <wsdl:part name="parameters" element="tns:getSoLuongTonMax" />
+  </wsdl:message>
+  <wsdl:message name="getSoLuongTonMaxSoapOut">
+    <wsdl:part name="parameters" element="tns:getSoLuongTonMaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSoTienKhachHangNoMaxSoapIn">
+    <wsdl:part name="parameters" element="tns:getSoTienKhachHangNoMax" />
+  </wsdl:message>
+  <wsdl:message name="getSoTienKhachHangNoMaxSoapOut">
+    <wsdl:part name="parameters" element="tns:getSoTienKhachHangNoMaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSoLuongTonSauBanMinSoapIn">
+    <wsdl:part name="parameters" element="tns:getSoLuongTonSauBanMin" />
+  </wsdl:message>
+  <wsdl:message name="getSoLuongTonSauBanMinSoapOut">
+    <wsdl:part name="parameters" element="tns:getSoLuongTonSauBanMinResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsThamSoBLLSoap">
+    <wsdl:operation name="getSoLuongNhapMin">
+      <wsdl:input message="tns:getSoLuongNhapMinSoapIn" />
+      <wsdl:output message="tns:getSoLuongNhapMinSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSoLuongTonMax">
+      <wsdl:input message="tns:getSoLuongTonMaxSoapIn" />
+      <wsdl:output message="tns:getSoLuongTonMaxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSoTienKhachHangNoMax">
+      <wsdl:input message="tns:getSoTienKhachHangNoMaxSoapIn" />
+      <wsdl:output message="tns:getSoTienKhachHangNoMaxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSoLuongTonSauBanMin">
+      <wsdl:input message="tns:getSoLuongTonSauBanMinSoapIn" />
+      <wsdl:output message="tns:getSoLuongTonSauBanMinSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsThamSoBLLSoap" type="tns:wsThamSoBLLSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getSoLuongNhapMin">
+      <soap:operation soapAction="http://tempuri.org/getSoLuongNhapMin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSoLuongTonMax">
+      <soap:operation soapAction="http://tempuri.org/getSoLuongTonMax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSoTienKhachHangNoMax">
+      <soap:operation soapAction="http://tempuri.org/getSoTienKhachHangNoMax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSoLuongTonSauBanMin">
+      <soap:operation soapAction="http://tempuri.org/getSoLuongTonSauBanMin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsThamSoBLLSoap12" type="tns:wsThamSoBLLSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getSoLuongNhapMin">
+      <soap12:operation soapAction="http://tempuri.org/getSoLuongNhapMin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSoLuongTonMax">
+      <soap12:operation soapAction="http://tempuri.org/getSoLuongTonMax" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSoTienKhachHangNoMax">
+      <soap12:operation soapAction="http://tempuri.org/getSoTienKhachHangNoMax" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSoLuongTonSauBanMin">
+      <soap12:operation soapAction="http://tempuri.org/getSoLuongTonSauBanMin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsThamSoBLL">
+    <wsdl:port name="wsThamSoBLLSoap" binding="tns:wsThamSoBLLSoap">
+      <soap:address location="http://localhost:1606/ServicesBLL/wsThamSoBLL.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsThamSoBLLSoap12" binding="tns:wsThamSoBLLSoap12">
+      <soap12:address location="http://localhost:1606/ServicesBLL/wsThamSoBLL.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="addNewHoaDonBanSach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="hoadonDTO" type="tns:HoaDonBanSachDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="HoaDonBanSachDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TongTien" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaChiTietHoaDon" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaKhachHang" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NgayLapHoaDon" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaHoaDon" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="addNewHoaDonBanSachResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="insertHoaDonBanSach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="hoadonDTO" type="tns:HoaDonBanSachDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertHoaDonBanSachResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="updateHoaDonBanSach">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="hoadonDTO" type="tns:HoaDonBanSachDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateHoaDonBanSachResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="getTongTienHoaDonBanSach">
+        <s:complexType />
+      </s:element>
+      <s:element name="getTongTienHoaDonBanSachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getTongTienHoaDonBanSachResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteAllTableHoaDonBanSach">
+        <s:complexType />
+      </s:element>
+      <s:element name="deleteAllTableHoaDonBanSachResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deleteAllTableHoaDonBanSachResult" type="tns:ArrayOfHoaDonBanSachDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfHoaDonBanSachDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="HoaDonBanSachDTO" nillable="true" type="tns:HoaDonBanSachDTO" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="addNewHoaDonBanSachSoapIn">
+    <wsdl:part name="parameters" element="tns:addNewHoaDonBanSach" />
+  </wsdl:message>
+  <wsdl:message name="addNewHoaDonBanSachSoapOut">
+    <wsdl:part name="parameters" element="tns:addNewHoaDonBanSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertHoaDonBanSachSoapIn">
+    <wsdl:part name="parameters" element="tns:insertHoaDonBanSach" />
+  </wsdl:message>
+  <wsdl:message name="insertHoaDonBanSachSoapOut">
+    <wsdl:part name="parameters" element="tns:insertHoaDonBanSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateHoaDonBanSachSoapIn">
+    <wsdl:part name="parameters" element="tns:updateHoaDonBanSach" />
+  </wsdl:message>
+  <wsdl:message name="updateHoaDonBanSachSoapOut">
+    <wsdl:part name="parameters" element="tns:updateHoaDonBanSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTongTienHoaDonBanSachSoapIn">
+    <wsdl:part name="parameters" element="tns:getTongTienHoaDonBanSach" />
+  </wsdl:message>
+  <wsdl:message name="getTongTienHoaDonBanSachSoapOut">
+    <wsdl:part name="parameters" element="tns:getTongTienHoaDonBanSachResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteAllTableHoaDonBanSachSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteAllTableHoaDonBanSach" />
+  </wsdl:message>
+  <wsdl:message name="deleteAllTableHoaDonBanSachSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteAllTableHoaDonBanSachResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsHoaDonBanSachSoap">
+    <wsdl:operation name="addNewHoaDonBanSach">
+      <wsdl:input message="tns:addNewHoaDonBanSachSoapIn" />
+      <wsdl:output message="tns:addNewHoaDonBanSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertHoaDonBanSach">
+      <wsdl:input message="tns:insertHoaDonBanSachSoapIn" />
+      <wsdl:output message="tns:insertHoaDonBanSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateHoaDonBanSach">
+      <wsdl:input message="tns:updateHoaDonBanSachSoapIn" />
+      <wsdl:output message="tns:updateHoaDonBanSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getTongTienHoaDonBanSach">
+      <wsdl:input message="tns:getTongTienHoaDonBanSachSoapIn" />
+      <wsdl:output message="tns:getTongTienHoaDonBanSachSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteAllTableHoaDonBanSach">
+      <wsdl:input message="tns:deleteAllTableHoaDonBanSachSoapIn" />
+      <wsdl:output message="tns:deleteAllTableHoaDonBanSachSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsHoaDonBanSachSoap" type="tns:wsHoaDonBanSachSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="addNewHoaDonBanSach">
+      <soap:operation soapAction="http://tempuri.org/addNewHoaDonBanSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertHoaDonBanSach">
+      <soap:operation soapAction="http://tempuri.org/insertHoaDonBanSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateHoaDonBanSach">
+      <soap:operation soapAction="http://tempuri.org/updateHoaDonBanSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTongTienHoaDonBanSach">
+      <soap:operation soapAction="http://tempuri.org/getTongTienHoaDonBanSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteAllTableHoaDonBanSach">
+      <soap:operation soapAction="http://tempuri.org/deleteAllTableHoaDonBanSach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsHoaDonBanSachSoap12" type="tns:wsHoaDonBanSachSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="addNewHoaDonBanSach">
+      <soap12:operation soapAction="http://tempuri.org/addNewHoaDonBanSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertHoaDonBanSach">
+      <soap12:operation soapAction="http://tempuri.org/insertHoaDonBanSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateHoaDonBanSach">
+      <soap12:operation soapAction="http://tempuri.org/updateHoaDonBanSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTongTienHoaDonBanSach">
+      <soap12:operation soapAction="http://tempuri.org/getTongTienHoaDonBanSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteAllTableHoaDonBanSach">
+      <soap12:operation soapAction="http://tempuri.org/deleteAllTableHoaDonBanSach" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsHoaDonBanSach">
+    <wsdl:port name="wsHoaDonBanSachSoap" binding="tns:wsHoaDonBanSachSoap">
+      <soap:address location="http://localhost:1604/Services/wsHoaDonBanSach.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsHoaDonBanSachSoap12" binding="tns:wsHoaDonBanSachSoap12">
+      <soap12:address location="http://localhost:1604/Services/wsHoaDonBanSach.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

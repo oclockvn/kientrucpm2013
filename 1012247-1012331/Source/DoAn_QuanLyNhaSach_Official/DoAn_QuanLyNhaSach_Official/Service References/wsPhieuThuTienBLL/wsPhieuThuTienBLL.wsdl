@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getListPhieuThuTien">
+        <s:complexType />
+      </s:element>
+      <s:element name="getListPhieuThuTienResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getListPhieuThuTienResult" type="tns:ArrayOfPhieuThuTienDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPhieuThuTienDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PhieuThuTienDTO" nillable="true" type="tns:PhieuThuTienDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PhieuThuTienDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaKhachHang" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SoTienThu" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NgayThu" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaPhieuThu" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ExtensionDataObject" />
+      <s:element name="insertPhieuThuTien">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="phieuDTO" type="tns:PhieuThuTienDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertPhieuThuTienResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="deletePhieuThuTien">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="phieuDTO" type="tns:PhieuThuTienDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deletePhieuThuTienResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deletePhieuThuTienResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updatePhieuThuTien">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="phieuDTO" type="tns:PhieuThuTienDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updatePhieuThuTienResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getListPhieuThuTienSoapIn">
+    <wsdl:part name="parameters" element="tns:getListPhieuThuTien" />
+  </wsdl:message>
+  <wsdl:message name="getListPhieuThuTienSoapOut">
+    <wsdl:part name="parameters" element="tns:getListPhieuThuTienResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertPhieuThuTienSoapIn">
+    <wsdl:part name="parameters" element="tns:insertPhieuThuTien" />
+  </wsdl:message>
+  <wsdl:message name="insertPhieuThuTienSoapOut">
+    <wsdl:part name="parameters" element="tns:insertPhieuThuTienResponse" />
+  </wsdl:message>
+  <wsdl:message name="deletePhieuThuTienSoapIn">
+    <wsdl:part name="parameters" element="tns:deletePhieuThuTien" />
+  </wsdl:message>
+  <wsdl:message name="deletePhieuThuTienSoapOut">
+    <wsdl:part name="parameters" element="tns:deletePhieuThuTienResponse" />
+  </wsdl:message>
+  <wsdl:message name="updatePhieuThuTienSoapIn">
+    <wsdl:part name="parameters" element="tns:updatePhieuThuTien" />
+  </wsdl:message>
+  <wsdl:message name="updatePhieuThuTienSoapOut">
+    <wsdl:part name="parameters" element="tns:updatePhieuThuTienResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsPhieuThuTienBLLSoap">
+    <wsdl:operation name="getListPhieuThuTien">
+      <wsdl:input message="tns:getListPhieuThuTienSoapIn" />
+      <wsdl:output message="tns:getListPhieuThuTienSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertPhieuThuTien">
+      <wsdl:input message="tns:insertPhieuThuTienSoapIn" />
+      <wsdl:output message="tns:insertPhieuThuTienSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deletePhieuThuTien">
+      <wsdl:input message="tns:deletePhieuThuTienSoapIn" />
+      <wsdl:output message="tns:deletePhieuThuTienSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updatePhieuThuTien">
+      <wsdl:input message="tns:updatePhieuThuTienSoapIn" />
+      <wsdl:output message="tns:updatePhieuThuTienSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsPhieuThuTienBLLSoap" type="tns:wsPhieuThuTienBLLSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getListPhieuThuTien">
+      <soap:operation soapAction="http://tempuri.org/getListPhieuThuTien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertPhieuThuTien">
+      <soap:operation soapAction="http://tempuri.org/insertPhieuThuTien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletePhieuThuTien">
+      <soap:operation soapAction="http://tempuri.org/deletePhieuThuTien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePhieuThuTien">
+      <soap:operation soapAction="http://tempuri.org/updatePhieuThuTien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsPhieuThuTienBLLSoap12" type="tns:wsPhieuThuTienBLLSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getListPhieuThuTien">
+      <soap12:operation soapAction="http://tempuri.org/getListPhieuThuTien" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertPhieuThuTien">
+      <soap12:operation soapAction="http://tempuri.org/insertPhieuThuTien" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletePhieuThuTien">
+      <soap12:operation soapAction="http://tempuri.org/deletePhieuThuTien" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePhieuThuTien">
+      <soap12:operation soapAction="http://tempuri.org/updatePhieuThuTien" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsPhieuThuTienBLL">
+    <wsdl:port name="wsPhieuThuTienBLLSoap" binding="tns:wsPhieuThuTienBLLSoap">
+      <soap:address location="http://localhost:1606/ServicesBLL/wsPhieuThuTienBLL.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsPhieuThuTienBLLSoap12" binding="tns:wsPhieuThuTienBLLSoap12">
+      <soap12:address location="http://localhost:1606/ServicesBLL/wsPhieuThuTienBLL.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

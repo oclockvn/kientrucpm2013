@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getListChiTietHoaDon">
+        <s:complexType />
+      </s:element>
+      <s:element name="getListChiTietHoaDonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getListChiTietHoaDonResult" type="tns:ArrayOfChiTietHoaDonDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfChiTietHoaDonDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ChiTietHoaDonDTO" nillable="true" type="tns:ChiTietHoaDonDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ChiTietHoaDonDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="1" maxOccurs="1" name="DonGia" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SoLuongBan" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaSach" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaChiTietHoaDon" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ExtensionDataObject" />
+      <s:element name="insertChiTietHoaDon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="chitietDTO" type="tns:ChiTietHoaDonDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertChiTietHoaDonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertChiTietHoaDonResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMaChiTietHoaDon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="masach" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMaChiTietHoaDonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getMaChiTietHoaDonResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteAllTableChiTietHoaDon">
+        <s:complexType />
+      </s:element>
+      <s:element name="deleteAllTableChiTietHoaDonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deleteAllTableChiTietHoaDonResult" type="tns:ArrayOfChiTietHoaDonDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTongTien">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="masach" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTongTienResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getTongTienResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getListChiTietHoaDonSoapIn">
+    <wsdl:part name="parameters" element="tns:getListChiTietHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="getListChiTietHoaDonSoapOut">
+    <wsdl:part name="parameters" element="tns:getListChiTietHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertChiTietHoaDonSoapIn">
+    <wsdl:part name="parameters" element="tns:insertChiTietHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="insertChiTietHoaDonSoapOut">
+    <wsdl:part name="parameters" element="tns:insertChiTietHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMaChiTietHoaDonSoapIn">
+    <wsdl:part name="parameters" element="tns:getMaChiTietHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="getMaChiTietHoaDonSoapOut">
+    <wsdl:part name="parameters" element="tns:getMaChiTietHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteAllTableChiTietHoaDonSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteAllTableChiTietHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="deleteAllTableChiTietHoaDonSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteAllTableChiTietHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTongTienSoapIn">
+    <wsdl:part name="parameters" element="tns:getTongTien" />
+  </wsdl:message>
+  <wsdl:message name="getTongTienSoapOut">
+    <wsdl:part name="parameters" element="tns:getTongTienResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsChiTietHoaDonBLLSoap">
+    <wsdl:operation name="getListChiTietHoaDon">
+      <wsdl:input message="tns:getListChiTietHoaDonSoapIn" />
+      <wsdl:output message="tns:getListChiTietHoaDonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertChiTietHoaDon">
+      <wsdl:input message="tns:insertChiTietHoaDonSoapIn" />
+      <wsdl:output message="tns:insertChiTietHoaDonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getMaChiTietHoaDon">
+      <wsdl:input message="tns:getMaChiTietHoaDonSoapIn" />
+      <wsdl:output message="tns:getMaChiTietHoaDonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteAllTableChiTietHoaDon">
+      <wsdl:input message="tns:deleteAllTableChiTietHoaDonSoapIn" />
+      <wsdl:output message="tns:deleteAllTableChiTietHoaDonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getTongTien">
+      <wsdl:input message="tns:getTongTienSoapIn" />
+      <wsdl:output message="tns:getTongTienSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsChiTietHoaDonBLLSoap" type="tns:wsChiTietHoaDonBLLSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getListChiTietHoaDon">
+      <soap:operation soapAction="http://tempuri.org/getListChiTietHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertChiTietHoaDon">
+      <soap:operation soapAction="http://tempuri.org/insertChiTietHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMaChiTietHoaDon">
+      <soap:operation soapAction="http://tempuri.org/getMaChiTietHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteAllTableChiTietHoaDon">
+      <soap:operation soapAction="http://tempuri.org/deleteAllTableChiTietHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTongTien">
+      <soap:operation soapAction="http://tempuri.org/getTongTien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsChiTietHoaDonBLLSoap12" type="tns:wsChiTietHoaDonBLLSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getListChiTietHoaDon">
+      <soap12:operation soapAction="http://tempuri.org/getListChiTietHoaDon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertChiTietHoaDon">
+      <soap12:operation soapAction="http://tempuri.org/insertChiTietHoaDon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMaChiTietHoaDon">
+      <soap12:operation soapAction="http://tempuri.org/getMaChiTietHoaDon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteAllTableChiTietHoaDon">
+      <soap12:operation soapAction="http://tempuri.org/deleteAllTableChiTietHoaDon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTongTien">
+      <soap12:operation soapAction="http://tempuri.org/getTongTien" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsChiTietHoaDonBLL">
+    <wsdl:port name="wsChiTietHoaDonBLLSoap" binding="tns:wsChiTietHoaDonBLLSoap">
+      <soap:address location="http://localhost:1606/ServicesBLL/wsChiTietHoaDonBLL.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsChiTietHoaDonBLLSoap12" binding="tns:wsChiTietHoaDonBLLSoap12">
+      <soap12:address location="http://localhost:1606/ServicesBLL/wsChiTietHoaDonBLL.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
